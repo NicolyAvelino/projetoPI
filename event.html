@@ -7,47 +7,96 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buscar Eventos</title>
     <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/partials/header.css">
+    <link rel="stylesheet" href="/css/partials/forms.css">
     <link rel="stylesheet" href="./css/partials/pageEvents.css">
 </head>
 
 <body id="pageEvent">
     <div id="container">
         <header class="page-header">
-            <div class="top-bar-container">
-                <a href="/"><img src="./img/Voltar.png" alt="Voltar"></a>
-                <img src="./img/Eventec.png" alt="Logo">
+            <div class="col">
+                <div class="top-bar-container">
+                    <a href="/"><img src="./img/Voltar.svg" alt="Voltar"></a>
+                    <img src="./img/Eventec.svg" alt="Logo">
+                </div>
             </div>
 
             <div class="header-content">
-                <strong>Estes são os eventos  disponíveis</strong>
+                <strong>Estes são os eventos disponíveis</strong>
                 <form id="search" action="">
                     <div class="busca">
                         <label for="txtBusca">Pesquisar evento:</label>
-                        <input type="text" id="txtBusca" placeholder="Escreva aqui"/>                       
-                    </div>
-                    <button type="submit"><img src="./img/search.png" class="btnBusca" alt="Buscar"/></button>  
-                      
+                        <div class="algItem">
+                            <input type="text" id="txtBusca" class="txtBusca" placeholder="Escreva aqui" />
+                            <button class="btn-search"> 
+                                <img src="./img/search.png" class="btnBusca" alt="Buscar" />
+                            </button>
+                        </div>
                 </form>
             </div>
         </header>
-        <div class="cards">
-            <div class="card-event">
-                <img src="./img/profile.svg" alt="Foto Perfil" />
-                <h2>Evento 01</h2>
-                <span>xxxxxxxxxx</span>
+        <main>
+            <!-- Primeiro card -->
+            <article class="card-item">
+                <header>
+                    <img src="./img/profile.svg" alt="Foto Perfil" />
+                    <div>
+                        <strong>Evento 01</strong>
+                        <span>Tecnologia</span>
+                    </div>
+                </header>
 
-                <p>Entusiasta das melhores tecnologias de química avançada.</p>
-                <p>Apaixonado por explodir coisas em laboratório e por mudar a vida das pessoas através de experiências. Mais de 200.000 pessoas já passaram por uma das minhas explosões.</p>
+                <p>It has survived not only five centuries<br><br> But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
 
-                <div class="cardDate">
-                    <span>Dia</span>
-                    <h2>Segunda</h2>
-                    <span>Horário</span>
-                    <h2>8h - 18h</h2>
+                <div class="cardData">
+                    <div>
+                        <span>Dia</span>
+                        <h2>Segunda</h2>
+                    </div>
+                    <div>
+                        <span>Horário</span>
+                        <h2>8h - 18h</h2>
+                    </div>
                 </div>
-                <button>Se cadastrar</button>
-            </div>
-        </div>
+
+                <footer>
+                    <p>xxxxxxxxxx</p>
+                    <button type="button">Se cadastrar</button>
+                </footer>
+
+            </article>
+
+            <!-- Segundo card -->
+            <article class="card-item">
+                <header>
+                    <img src="./img/profile.svg" alt="Foto Perfil" />
+                    <div>
+                        <strong>Evento 2</strong>
+                        <span>Empreendedorismo</span>
+                    </div>
+                </header>
+
+                <p>It has survived not only five centuries<br><br> But also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+                <div class="cardData">
+                    <div>
+                        <span>Dia</span>
+                        <h2>Segunda</h2>
+                    </div>
+                    <div>
+                        <span>Horário</span>
+                        <h2>8h - 18h</h2>
+                    </div>
+                </div>
+
+                <footer>
+                    <p>xxxxxxxxxx</p>
+                    <button type="button">Se cadastrar</button>
+                </footer>
+
+            </article>
+        </main>
     </div>
 
 </body>

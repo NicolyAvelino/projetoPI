@@ -1,112 +1,187 @@
 /* Header */
+body{
+    background: var(--background-secondary-color);
+}
 #pageEvent #container {
     width: 100vw;
     height: 100vh;
 }
 
-.page-header {
-    background-color: var(--first-color);
-
-    display: flex;
-    flex-direction: column;
+/* Main */
+#pageEvent main {
+    margin: 3.2rem auto;
+    width: 90%;
 }
 
-.page-header .top-bar-container {
-    width: 90%;
-    padding: 1.6rem 0;
+/* Main - Card Item */
+.card-item {
+    background-color: #fff;
+    border: 1px solid var(--border-color);
+    border-radius: 0.8rem;
+    margin-top: 2.4rem;
+}
 
-    margin: 0 auto;
+.card-item header {
+    padding: 3.2rem 2rem;
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+}
+
+.card-item header img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+.card-item header div {
+    margin-left: 2.4rem;
+}
+
+.card-item header div strong {
+    font: 700 2.4rem Roboto;
+    display: block;
+    color: var(--text-color);
+}
+
+.card-item header div span {
+    font-size: 1.6rem;
+    display: block;
+    margin-top: .4rem;
+    color: var(--text-color-card);
+}
+
+.card-item > p {
+    padding: 0 2rem;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    color: var(--text-color-card);
+}
+
+.card-item .cardData {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2rem;
+    margin-top: 3rem;
+    margin-bottom: 7rem;
+}
+
+.card-item .cardData span {
+    color: var(--text-color-card);
+}
+
+.card-item .cardData h2 {
+    font-size: 2rem;
+    color: var(--text-color-card);
+}
+
+.card-item .cardData>div {
+    margin-right: 3rem;
+}
+
+.card-item footer {
+    padding: 3.2rem;
+    background-color: var(--color-form);
+    border-top: 1px solid var(--line-color);
+    margin-top: 3.2rem;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.page-header .top-bar-container a {
-    height: 3.2rem;
-    transition: opacity 0.2s;
+.card-item footer p {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    color: var(--text-color-card);
 }
 
-.page-header .top-bar-container a:hover {
-    opacity: 0.6;
-}
-
-.page-header .top-bar-container img {
-    height: 1.6rem;
-}
-
-/* header-content */
-.page-header .header-content {
-    width: 90%;
-    margin: 3.2rem auto;
-}
-
-.page-header .header-content strong {
-    font: 700 3.6rem Roboto;
-    line-height: 4.2rem;
+.card-item footer button {
+    width: 20rem;
+    height: 5.6rem;
+    background-color: var(--btn-color);
     color: var(--white-text);
-
-}
-
-/* Form - search */
-#search {
-    margin-top: 3.2rem;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
-.busca{
-    width: 80%;
-}
-
-#search button{
-    width:10%;
-    height: 5.6rem;
     border: 0;
-    border-radius: 0 .8rem .8rem 0;
+    border-radius: .8rem;
     cursor: pointer;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font: 700 1.4rem Roboto;
+
+    transition: background 0.2s;
     text-decoration: none;
-    margin-top: 2.7rem;
-}
-#search input{
-    width: 100%;
-    height: 5.6rem;
-    margin-top: 0.8rem;
-    border-radius: 0.8rem 0 0 .8rem;
-    border: 1px solid var(--background-secondary-color);
-    outline: 0;
-    padding: 0 1.6rem;
-    font: 1.6rem Roboto;
-} 
-/* Buscar eventos */
-/* .busca {
-    background-color: #E0EEEE;
-    border: solid 2px #5F9EA0;
-    border-radius: 10px;
-    width: 300px;
-    height: 32px;
+    margin-left: 1.6rem;
 }
 
-#txtBusca {
-    float: left;
-    background-color: transparent;
-    padding-left: 5px;
-    font-size: 18px;
-    border: none;
-    height: 32px;
-    width: 191px;
+.card-item footer button:hover {
+    background: var(--btn-colorh);
 }
 
-#btnBusca {
-    border: none;
-    float: left;
-    height: 32px;
-    border-radius: 0 7px 7px 0;
-    width: 70px;
-    font-weight: bold;
-    background: #5F9EA0;
-} */
+@media(min-width: 700px) {
+    #pageEvent #container {
+        max-width: 100vw;
+    }
 
+    .page-header {
+        height: 340px;
+    }
+
+    .page-header .top-bar-container {
+        max-width: 1100px;
+    }
+
+    .page-header .header-content {
+        max-width: 740px;
+
+        margin: 0 auto;
+
+        flex: 1 1;
+        padding-bottom: 48px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .page-header .header-content strong {
+        max-width: 350px;
+    }
+
+    .card-item header,
+    .card-item footer {
+        padding: 32px;
+    }
+
+    .card-item>p {
+        padding: 0 32px;
+    }
+
+    .card-item .cardData {
+        padding: 0 3rem;
+    }
+
+    #search {
+        position: absolute;
+        bottom: -20px;
+        width: 100%;
+        margin: 0;
+    }
+
+    #search .algItem {
+        margin: 1rem 0 0 0;
+    }
+
+    .algItem {
+        margin: 0;
+    }
+
+    #pageEvent main {
+        padding: 32px 0;
+        max-width: 740px;
+        margin: 0 auto;
+    }
+
+    .card-item footer button {
+        width: 245px;
+        font-size: 16px;
+    }
+}
